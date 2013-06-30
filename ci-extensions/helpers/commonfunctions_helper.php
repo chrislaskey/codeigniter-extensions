@@ -5,21 +5,10 @@
  *
  * @author: Chris Laskey
  * @source: http://chrislaskey.com
- * @version: 3.0.4
- * @updated: 2012.05.08
+ * @version: 3.0.5
+ * @updated: 2013.06.29
  *
  * A collection of simple functions used in the application
- *
- * Changelog
- *
- * Version 3.0.3
- * --------------
- * Created $send_cookie option to simple_curl
- *
- * Version 3.0.1
- * --------------
- * Adjusted RSS feed function to include generic email address
- *
  */
 
 if( ! function_exists('nav') ){
@@ -469,14 +458,6 @@ if( ! function_exists('create_password_salt') ){
 
 }
 
-if( ! function_exists('create_password') ){
-
-	function create_password($length = 30){
-
-	}
-
-}
-
 if( ! function_exists('return_last_name') ){
 
 	function return_last_name($string){
@@ -609,25 +590,6 @@ if( ! function_exists('simple_curl') ){
 
 		return $data;
 
-	}
-
-}
-
-if( ! function_exists('footnote') ){
-
-	function footnote($int){
-		echo '<sup><a href="#footnote'.$int.'">'.$int.'</a></sup>';
-	}
-
-}
-
-if( ! function_exists('sidequote') ){
-
-	function sidequote($text, $width = '220', $alignment = 'left'){
-		$align = ( $alignment == 'left' ) ? 'left' : 'right';
-		return '<span class="sidequote sidequote_'.$align.'" style="width:'.$width.'px">
-					<span class="text">'.$text.'</span>
-				</span>';
 	}
 
 }
