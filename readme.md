@@ -13,7 +13,9 @@ This project extends core functionality of CodeIgniter. To ensure everything is
 loaded on each request, add the following line to
 `application/config/autoload.php` in the packages section:
 
-	$autoload['packages'] = array(APPPATH.'third_party/ci-extensions');
+```php
+$autoload['packages'] = array(APPPATH.'third_party/ci-extensions');
+```
 
 This will automatically load everything in the `helpers` and `libraries`
 directories.
