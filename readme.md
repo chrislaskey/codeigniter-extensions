@@ -1,10 +1,29 @@
 About
-================================================================================
+=====
 
 A collection of core extensions to CodeIgniter.
 
+Loader
+------
+
+**Adds support for nested controller files**
+
+By default CodeIgniter only supports a maximum depth of one directory. This
+extension modifies the core Loader method to allow `controllers` to have
+multiple directory levels.
+
+For example the URI `/multiple/levels/before/controller` will be automatically
+routed to the directory
+`application/controllers/multiple/levels/before/controller.php`.
+
+To add this extension include the `core/CIE_Loader.php` file.
+
 Installation
-================================================================================
+============
+
+It is recommended to use CodeIgniter's third party support to install these
+extensions. This allows this project's files to be updated separately from
+application specific code.
 
 The first step is download and install the `ci-extensions` directory into the
 CodeIgniter `applications/third_party` directory.
