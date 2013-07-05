@@ -21,9 +21,9 @@ To add this extension include the `core/CIE_Loader.php` file.
 URI
 ---
 
-**Adds `$this->uri->depth()` function**
+**Adds `$this->uri->depth()` method**
 
-The default CodeIgniter URI library includes methods to return a specific URI segment (`$this->uri->segment(3)`) or the entire string (`$this->uri->uri_string()`). This extension adds a new method `depth` which is an intermediary method between the two. The `depth` method returns a URI string up to a specific URI segment length.
+The default CodeIgniter URI library includes methods to return a specific URI segment `$this->uri->segment(3)` or the entire string `$this->uri->uri_string()`. This extension adds a new method `depth` which is an intermediary method between the two. The `depth` method returns a URI string up to a specific URI segment length.
 
 For example, given the URI:
 
