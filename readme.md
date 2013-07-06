@@ -3,20 +3,20 @@ About
 
 A collection of core extensions to CodeIgniter.
 
-Loader
+Router
 ------
 
 **Adds support for nested controller files**
 
 By default CodeIgniter only supports a maximum depth of one directory. This
-extension modifies the core Loader method to allow `controllers` to have
+extension modifies the core Router method to allow `controllers` to have
 multiple directory levels.
 
 For example the URI `/multiple/levels/before/controller` will be automatically
 routed to the directory
 `application/controllers/multiple/levels/before/controller.php`.
 
-To add this extension include the `core/CIE_Loader.php` file.
+To add this extension follow the installation instructions and include the `core/CIE_Router.php` file.
 
 URI
 ---
@@ -38,6 +38,8 @@ $this->uri->depth(3) == "/admin/accounts/people/";
 ```
 
 The `depth` function can be used to avoid hard coding URIs in controllers and views.
+
+To add this extension follow the installation instructions and include the `core/CIE_URI.php` file.
 
 Installation
 ============
