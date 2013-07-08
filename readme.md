@@ -6,35 +6,6 @@ A collection of core extensions to CodeIgniter.
 Router
 ------
 
-**Adds support for loading PHP classes outside the universal CI object**
-**Adds support for extending the DB class**
-
-By default the Loader function loads assets into the universal CodeIgniter
-object which is then referenced via `$this` or by calling `&get_instance()`. If
-the resource is a class, one object is instantiated and added to the
-CodeIgniter object.
-
-This works great for the majority of uses cases, but it does restrict the
-functionality of PHP Classes in two ways. First it makes it harder to
-instantiate multiple instances. Second it offers no separation between when
-a class is loaded into the namespace and when an object is instantiated. Having
-control to delay instantiation until later is helpful for particularly resource
-heavy objects.
-
-This extension adds the `$this->load->class()` method. It offers a clean way to
-load classes into the current namespace without instantiating an object and adding
-it to the universal CodeIgniter object.
-
-By default CodeIgniter restricts the extension of the `system/core/DB.php`
-file. This extension also adds support for extending this file using the
-standard `application/core/MY_DB.php` method. 
-
-To add this extension follow the installation instructions and include the
-`core/CIE_Loader.php` file.
-
-Router
-------
-
 **Adds support for nested controller files**
 
 By default CodeIgniter only supports a maximum depth of one directory. This
@@ -69,6 +40,45 @@ $this->uri->depth(3) == "/admin/accounts/people/";
 The `depth` function can be used to avoid hard coding URIs in controllers and views.
 
 To add this extension follow the installation instructions and include the `core/CIE_URI.php` file.
+
+
+Loader
+------
+
+**Adds support for loading PHP classes outside the universal CI object**
+**Adds support for extending the DB class**
+
+By default the Loader function loads assets into the universal CodeIgniter
+object which is then referenced via `$this` or by calling `&get_instance()`. If
+the resource is a class, one object is instantiated and added to the
+CodeIgniter object.
+
+This works great for the majority of uses cases, but it does restrict the
+functionality of PHP Classes in two ways. First it makes it harder to
+instantiate multiple instances. Second it offers no separation between when
+a class is loaded into the namespace and when an object is instantiated. Having
+control to delay instantiation until later is helpful for particularly resource
+heavy objects.
+
+This extension adds the `$this->load->class()` method. It offers a clean way to
+load classes into the current namespace without instantiating an object and adding
+it to the universal CodeIgniter object.
+
+By default CodeIgniter restricts the extension of the `system/core/DB.php`
+file. This extension also adds support for extending this file using the
+standard `application/core/MY_DB.php` method. 
+
+To add this extension follow the installation instructions and include the
+`core/CIE_Loader.php` file.
+
+Output
+------
+
+**Fixes output caching bug**
+
+The default CodeIgniter Output library includes a caching method. This function adds a simple check to ensure cached output is not empty, a problem with the current CodeIgniter implementation.
+
+To add this extension follow the installation instructions and include the `core/CIE_Output.php` file.
 
 Installation
 ============
