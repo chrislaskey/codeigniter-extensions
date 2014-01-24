@@ -139,10 +139,10 @@ class MultiArray {
             }
         } else {
             if ($key_exists) {
-                $current_value = is_numeric($arr[$head]) ? $arr[$head] : 0;
+                $current_value = is_numeric($arr[$head]) ? intval($arr[$head]) : 0;
                 $arr[$head] = $current_value + 1;
             } else {
-                $arr[$head] = 0;
+                $arr[$head] = 1;
             }
             return $arr;
         }
